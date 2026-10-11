@@ -24,8 +24,6 @@ class Carta {
     const property jerarquia
     const property imagen = ""
 
-    method jugar() { // PENSAR LÓGICA LUEGO
-    }
 
     // -1 si es peor, 0 si es igual, 1 si es mejor
     method mejorQue(otraCarta) { return 

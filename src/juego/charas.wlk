@@ -2,7 +2,7 @@ import src.juego.cards.joker
 class Chara {
     var property cartas = new Dictionary()
 
-    override method initialize() { // automaticamente cartas es {1:joker, 2:joker, 3:joker}
+    override method initialize() {
         self.limpiarMano()
     }
 
@@ -33,11 +33,6 @@ class Chara {
         } else return joker
     }
 
-    method decideCantarTruco() {return true}
-    method decideCantarRetruco() {return true}
-    method decideCantarValecuatro() {return true}
-    method decideAceptarTruco(estadoTruco) {return true}
-
 }
 const mainPlayer = new Chara()
 // LAS CARTAS SON 0, 1, 2, DESPUÉS EN LOS CONTROLES LO VEMOS
@@ -60,11 +55,18 @@ class Rival inherits Chara {
     // method sumarPuntos(pts) {puntos += pts}
 
     method mensaje(ganoRival) = if (ganoRival) msgVictoria else msgDerrota
+    
+    // ↓ abstractos ↓ dependen de la dificultad del rival
+    method decideCantarTruco(estadoTruco)
+    method decideAceptarTruco(estadoTruco)
 }
 
-const rivalEasy = new Rival(nombre = "easiest", dificultad = 1,
-    msgVictoria = "JA, PERDISTE CONTRA MÍ, SOS RE BOBO", msgDerrota = "Y bue, era obvio")
+object rivalEasy inherits Rival(nombre = "easiest", dificultad = 1,
+    msgVictoria = "JA, PERDISTE CONTRA MÍ, SOS RE BOBO", msgDerrota = "Y bue, era obvio") {
+    override method decideCantarTruco(e) = e == 1
+    override method decideAceptarTruco(e) = true
+}/*
 const rivalMid = new Rival(nombre = "midest", dificultad = 2,
     msgVictoria = "Jeje, no contabas con mi astucia 🤓", msgDerrota = "Hmm... bien jugado")
 const rivalHard = new Rival(nombre = "hardest", dificultad = 3,
-    msgVictoria = "No te calentés, ni tenías chance...", msgDerrota = "I-IMPOSIBLE!!! * se pega un tiro *")
+    msgVictoria = "No te calentés, ni tenías chance...", msgDerrota = "I-IMPOSIBLE!!! * se pega un tiro *") */
