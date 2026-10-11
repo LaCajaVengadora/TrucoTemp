@@ -1,0 +1,88 @@
+import src.juego.vibora.*
+
+/*describe "truco" {
+    test ""
+}*/
+
+describe "viborita" {
+    test "moverIzquierda"{
+        vibora.direccion(izquierda)
+        vibora.position(new Position(x=2,y=5))
+
+        vibora.moverse()   
+
+        assert.equals(
+            new Position(x=1,y=5),
+            vibora.position()
+        )
+    }
+
+    test "moverDerecha"{
+        vibora.direccion(derecha)
+        vibora.position(new Position(x=2, y=5))
+
+        vibora.moverse()   
+
+        assert.equals(
+            new Position(x=3,y=5),
+            vibora.position()
+        )
+    }
+
+    test "moverArriba"{
+        vibora.direccion(arriba)
+        vibora.position(new Position(x=2, y=5))
+
+        vibora.moverse()   
+
+        assert.equals(
+            new Position(x=2,y=6),
+            vibora.position()
+        )
+    }
+
+    test "moverAbajo"{
+        vibora.direccion(abajo)
+        vibora.position(new Position(x=2, y=5))
+
+        vibora.moverse()   
+
+        assert.equals(
+            new Position(x=2,y=4),
+            vibora.position()
+        )
+    }
+
+    test "si mira para arriba la imagen es la vibora para arriba"{
+        vibora.direccion(arriba)
+
+        assert.equals(
+            "viborita_cabeza_arriba.png",
+            vibora.image()
+        )
+    }
+        test "si mira para la izquierda la imagen es la vibora para la izquierda"{
+        vibora.direccion(izquierda)
+
+        assert.equals(
+            "viborita_cabeza_izquierda.png",
+            vibora.image()
+        )
+    }
+        test "si mira para la derecha la imagen es la vibora para la derecha"{
+        vibora.direccion(derecha)
+
+        assert.equals(
+            "viborita_cabeza_derecha.png",
+            vibora.image()
+        )
+    }
+        test "si mira para abajo la imagen es la vibora para abajo"{
+        vibora.direccion(abajo)
+
+        assert.equals(
+            "viborita_cabeza_abajo.png",
+            vibora.image()
+        )
+    }
+}

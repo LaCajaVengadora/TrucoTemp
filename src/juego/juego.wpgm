@@ -1,0 +1,18 @@
+import src.juego.vibora.*
+
+program miJuego {
+    game.width(7)
+    game.height(11)
+    game.cellSize(32)
+    game.ground("celda.png")
+    game.title("Truco")
+
+    game.start()
+    game.addVisual(vibora)
+    
+    game.onTick(600, "moverse", { vibora.moverse() } )
+    keyboard.right().onPressDo({ vibora.direccion(derecha) })
+    keyboard.left().onPressDo({ vibora.direccion(izquierda) })
+    keyboard.up().onPressDo({ vibora.direccion(arriba) })
+    keyboard.down().onPressDo({ vibora.direccion(abajo) })
+}
