@@ -43,10 +43,10 @@ class MatchScene {
         nextEnvido.put(1, "ENVIDO")
         nextEnvido.put(2, "REALENVIDO")
         nextEnvido.put(3, "FALTAENVIDO")
-        nextEnvido.put(1, 2)
-        nextEnvido.put(2, 2)
-        nextEnvido.put(3, 3)
-        nextEnvido.put(4, 0) // TODO: VER CÓMO CALCULAR PUNTOS DE FALTAENVIDO
+        puntosPorEnvido.put(1, 2)
+        puntosPorEnvido.put(2, 2)
+        puntosPorEnvido.put(3, 3)
+        puntosPorEnvido.put(4, 0) // TODO: VER CÓMO CALCULAR PUNTOS DE FALTAENVIDO
     }
 
     // inicia la partida
@@ -292,29 +292,73 @@ class MatchScene {
     var rivalEsperaRtaEnvido = false
     var esCantorUltimoEnvidoPlayer = false // TODO: puede hacerse lo mismo en el truco, lo vale?
 
-    method puedeCantarEnvidoPlayer(nivel) = true
+    method puedeCantarEnvidoPlayer(nivelCantado) { return
+        nivelCantado > nivelEnvido && (!esCantorUltimoEnvidoPlayer || rivalEsperaRtaEnvido)
+    }
 
-    method cantarEnvidoPlayer(nivel) { // si se pasa 1, se pide el envido1
-        if (self.puedeCantarEnvidoPlayer(nivel)) {
+    method cantarEnvidoPlayer(nivelCantado) { // si se pasa 1, se pide el envido1
+        if (self.puedeCantarEnvidoPlayer(nivelCantado)) {
             esCantorUltimoEnvidoPlayer = true
             rivalEsperaRtaEnvido = false
-            console.println("Player canta " + nextEnvido.get(nivel-1))
+
+            console.println("Player canta " + nextEnvido.get(nivelCantado-1))
 
             // 0 → NO QUIERE, 1 → SI QUIERE, 2 → SUBE A ENVIDO, 3 → SUBE A REALENVIDO, 4 → SUBE A FALTAENVIDO
-            var respuestaRival = rival.respuestaEnvido(nivel) // TODO: evaluar cómo decide
+            var respuestaRival = rival.respuestaEnvido(nivelCantado) // TODO: evaluar cómo decide
             // IMPORTANTE: asumimos que RIVAL no va a responder un nivel anterior
             if (respuestaRival == 0) {
-                console.println("Rival rechaza " + nextEnvido.get(nivel-1))
+                console.println("Rival rechaza " + nextEnvido.get(nivelCantado-1))
+                // puntosEnvido se mantiene
                 if (!esTurnoPlayer) self.ejecutarTurnoRival() // si es turno del PLAYER, sigue en control; sino, el flujo pasa al RIVAL
-            } else {
+            } else if (respuestaRival == 1) {
+                console.println("Rival rechaza " + nextEnvido.get(nivelCantado-1))
+                nivelEnvido = nivelCantado
+
+                puntosEnvido += puntosPorEnvido.get(nivelEnvido)
+            }
+            else {
                 puntosEnvido += puntosPorEnvido.get(respuestaRival)
                 console.println("Rival rechaza " + nextTruco.get(nivelTruco))
                 self.avanzarRonda(true) // avanzarRonda suma los puntos de nivelTruco (true porque se suman al PLAYER si RIVAL rechaza)
             }
         }
+    }
+
+    method puedeAceptarEnvidoPlayer(nivelCantado) { return true
+
+    }
+    method aceptarEnvidoPlayer(acepta) {
+        if (self.puedeAceptarEnvidoPlayer(nivelEnvido)) {
+            rivalEsperaRtaEnvido = false
+            if (acepta) {
+                console.println("Player acepta " + nextEnvido.get(nivelEnvido-1))
+                puntosEnvido += 1
+                if (!esTurnoPlayer) self.ejecutarTurnoRival()
+                // como RIVAL siempre canta en su turno, si PLAYER acepta entonces RIVAL sigue su turno
+                // y cuando se suman los puntos del envido???
+            } else {
+                console.println("Player rechaza " + nextEnvido.get(nivelEnvido-1))
+                //self.avanzarRonda(false) // avanzarRonda suma los puntos de nivelTruco (false porque se suman al RIVAL si PLAYER rechaza)
+                // eeeee y acá ↑ ?
+            }
+        } 
 
     }
 
+    method puedeCantarEnvidoRival(nivelCantado) = nivelCantado > nivelEnvido && !rivalEsperaRtaEnvido
+
+    method cantarEnvidoRival(nivelCantado) { // TODO: el rival.decideCantarEnvido estará arriba como con el truco
+        esCantorUltimoEnvidoPlayer = false
+        console.println("Rival canta " + nextTruco.get(nivelCantado-1))
+        nivelEnvido += 1 // se suma un nivelEnvido, pero no los puntosEnvido
+        rivalEsperaRtaEnvido = true
+        // flujo vuelve al player
+    } // IMPORTANTE: no se suma automáticamente el nivelTruco, eso se hace cuando PLAYER acepta (ver aceptarTrucoPlayer())
+
+    // false si gana RIVAL, true si gana PLAYER (en empate, gana quien sea mano)
+    method compararPuntosEnvido() { // SUMEMOS LOS PUNTOS DE ENVIDO AL INICIO DE LA RONDA!!! LUEGO DE REPARTIR
+        return 0
+    }
 
 
 
