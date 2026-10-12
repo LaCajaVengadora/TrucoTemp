@@ -21,6 +21,7 @@ JERARQUÍAS (E, B, O, C)
 class Carta {
     const property num
     const property palo
+    const property valorEnvido = if ([10, 11, 12].contains(num)) 0 else num
     const property jerarquia
     const property imagen = ""
 

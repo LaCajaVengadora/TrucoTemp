@@ -33,6 +33,17 @@ class Chara {
         } else return joker
     }
 
+    method envidoEntre(carta1, carta2) { // TODO: pensar si está bien que sea un método del jugador
+        if (carta1.palo() == carta2.palo()) return 20 + carta1.valorEnvido() + carta2.valorEnvido()
+        else return 0
+    }
+    method cantEnvido() {
+        const carta1 = cartas.get(1) const carta2 = cartas.get(2) const carta3 = cartas.get(3)
+        return [carta1.valorEnvido(), carta2.valorEnvido(), carta3.valorEnvido(),
+                self.envidoEntre(carta1, carta2), self.envidoEntre(carta1, carta3), self.envidoEntre(carta2, carta3)
+        ].max() // guardo todo porque si las 3 son de palos distintos, cantEnvido es la carta de mayor valorEnvido
+    }
+
 }
 const mainPlayer = new Chara()
 // LAS CARTAS SON 0, 1, 2, DESPUÉS EN LOS CONTROLES LO VEMOS
