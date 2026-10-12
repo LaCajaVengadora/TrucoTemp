@@ -69,13 +69,22 @@ class Rival inherits Chara {
     
     // ↓ abstractos ↓ dependen de la dificultad del rival
     method decideCantarTruco(estadoTruco)
-    method decideAceptarTruco(estadoTruco)
+    //method decideAceptarTruco(estadoTruco)
+    method respuestaTruco(estadoTruco)
+    method decideCantarEnvido(estadoEnvido)
+    //method decideAceptarEnvido(estadoEnvido)
+    method respuestaEnvido(estadoEnvido)
 }
 
 object rivalEasy inherits Rival(nombre = "easiest", dificultad = 1,
     msgVictoria = "JA, PERDISTE CONTRA MÍ, SOS RE BOBO", msgDerrota = "Y bue, era obvio") {
     override method decideCantarTruco(e) = e == 1
-    override method decideAceptarTruco(e) = true
+    //override method decideAceptarTruco(e) = true
+    override method respuestaTruco(e) = true
+
+    override method decideCantarEnvido(e) = 1 // ojo que 2 no puede ser cantado de una
+    //override method decideAceptarEnvido(e) = true
+    override method respuestaEnvido(e) = 1 // quiero
 }/*
 const rivalMid = new Rival(nombre = "midest", dificultad = 2,
     msgVictoria = "Jeje, no contabas con mi astucia 🤓", msgDerrota = "Hmm... bien jugado")
