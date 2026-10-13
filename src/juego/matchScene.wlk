@@ -1,7 +1,10 @@
 import src.juego.cards.*
 import src.juego.charas.*
 
-class MatchScene {
+class Match {
+    const property bg
+    const property position = game.origin()
+
     const player = mainPlayer
     const rival
     const dificultad = rival.dificultad()
@@ -25,8 +28,8 @@ class MatchScene {
     var rivalEsperaRtaEnvido = false
     var nivelCantadoPorRival = 0 // para pasar la data entre métodos (sobre todo para sumar 1 ante el rechazo del primer canto)
     var esCantorUltimoEnvidoPlayer = false // TODO: puede hacerse lo mismo en el truco, lo vale?
-    var cantEnvidoPlayer = 0
-    var cantEnvidoRival = 0
+    var property cantEnvidoPlayer = 0
+    var property cantEnvidoRival = 0
 
     var property mano = 1 // resetear con RONDA
     var turno = 1 // resetear con RONDA
@@ -63,6 +66,13 @@ class MatchScene {
         self.repartir()
     }
 
+    method cancel() {
+        puntosPlayer = 0 puntosRival = 0
+        self.resetRonda()
+        esManoPlayer = [true, false].anyOne()
+        esTurnoPlayer = esManoPlayer
+    }
+
     // reparte las cartas
     method repartir() {
         var mazoAux = mazoEntero.randomized()
@@ -76,16 +86,13 @@ class MatchScene {
     // finaliza la partida (resetea todo)
     method end(ganoPlayer) {
         console.println(rival.mensaje(!ganoPlayer))
-        puntosPlayer = 0 puntosRival = 0
-        self.resetRonda()
-        esManoPlayer = [true, false].anyOne() // sobreescribo lo de resetRonda()
-        esTurnoPlayer = esManoPlayer
+        self.cancel()
     }
 
     // devuelve si alguien ganó; en tal caso finaliza la partida y devuelve true
     method checkVictoria() {
         if (puntosPlayer >= puntosWin || puntosRival >= puntosWin) {
-            self.end(puntosPlayer > puntosWin) // TODO: simplificar? no hay manera que los dos sumen puntos a la vez
+            self.end(puntosPlayer >= puntosWin) // TODO: simplificar? no hay manera que los dos sumen puntos a la vez
             return true
         } else return false
     }
@@ -328,7 +335,7 @@ class MatchScene {
     method puedeCantarEnvidoPlayer(nivelCantado) { return
         nivelCantado > nivelCantadoPorRival && (!esCantorUltimoEnvidoPlayer || rivalEsperaRtaEnvido) && mano == 1
         && nivelEnvido == 0 && puntosEnvido == 0 // quizas redundante, pero por las dudas
-        && !rivalEsperaRtaTruco && nivelTruco == 0 && ((nivelCantado == 2 && nivelEnvido == 1) || nivelCantado != 2)
+        && !rivalEsperaRtaTruco && nivelTruco == 0 && ((nivelCantado == 2 && nivelCantadoPorRival == 1) || nivelCantado != 2)
     }
 
     // ACCIÓN DEL PLAYER
@@ -434,7 +441,7 @@ class MatchScene {
     }
 }
 
-const matchEasy = new MatchScene(rival = rivalEasy)
+const matchEasy = new Match(rival = rivalEasy, bg = "placeholder_juego.png")
 
 object tester {
     method init() {
