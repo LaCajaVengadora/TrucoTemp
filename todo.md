@@ -45,4 +45,4 @@ Las imágenes deben tener lo siguiente
 
 ### PARTIDA DE EJEMPLO:
 
-<img src="../../assets/example/match.png" alt="img sin cartas" width="400" height="auto"> <img src="../../assets/example/match-c.png" alt="img con cartas" width="400" height="auto">
+<img src="assets/example/match.png" alt="img sin cartas" width="400" height="auto"> <img src="assets/example/match-c.png" alt="img con cartas" width="400" height="auto">

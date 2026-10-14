@@ -104,3 +104,67 @@
 {"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":109,"timestamp":"2026-10-13T21:07:45.077Z"}
 {"level":"info","message":"⌛ Validating src/juego/matchScene.wlk","timeElapsed":101,"timestamp":"2026-10-13T21:07:45.178Z"}
 {"level":"info","message":"⌛ Validating src/juego/juego.wpgm","timeElapsed":102,"timestamp":"2026-10-13T21:07:45.282Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":198,"timestamp":"2026-10-14T17:07:01.595Z"}
+{"level":"error","message":"✘ Failed to rebuild document Missing workspace folder!","stack":"Error: Missing workspace folder!\n    at QF (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:2430:7332)\n    at V3.invoke (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:3:157330)\n    at o.fire (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:3:158100)\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:37:57488\n    at nd (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:8:1561)\n    at It (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:7:6224)\n    at et (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:7:6378)\n    at Immediate._onImmediate (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:7:6142)\n    at process.processImmediate (node:internal/timers:574:21)","timestamp":"2026-10-14T17:07:01.600Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":165,"timestamp":"2026-10-14T17:07:01.934Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":149,"timestamp":"2026-10-14T17:07:02.202Z"}
+{"level":"info","message":"⌛ Validating src/juego/gameHandler.wlk","timeElapsed":243,"timestamp":"2026-10-14T17:07:02.544Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":216,"timestamp":"2026-10-14T17:07:02.762Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":156,"timestamp":"2026-10-14T17:07:02.918Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":132,"timestamp":"2026-10-14T17:07:03.070Z"}
+{"level":"info","message":"⌛ Validating src/juego/gameHandler.wlk","timeElapsed":182,"timestamp":"2026-10-14T17:07:03.253Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":119,"timestamp":"2026-10-14T17:07:03.472Z"}
+{"level":"info","message":"⌛ Validating src/juego/gameHandler.wlk","timeElapsed":145,"timestamp":"2026-10-14T17:07:03.619Z"}
+{"level":"info","message":"⌛ Validating src/juego/gameHandler.wlk","timeElapsed":112,"timestamp":"2026-10-14T17:07:03.733Z"}
+{"level":"info","message":"⌛ Validating src/galletitas.wlk","timeElapsed":139,"timestamp":"2026-10-14T17:07:03.872Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":417,"timestamp":"2026-10-14T17:07:04.291Z"}
+{"level":"info","message":"⌛ Validating src/juego/vibora.wlk","timeElapsed":130,"timestamp":"2026-10-14T17:07:04.422Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":433,"timestamp":"2026-10-14T17:07:04.856Z"}
+{"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":168,"timestamp":"2026-10-14T17:07:05.024Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":183,"timestamp":"2026-10-14T17:07:05.210Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":181,"timestamp":"2026-10-14T17:07:05.415Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":173,"timestamp":"2026-10-14T17:07:05.608Z"}
+{"level":"info","message":"⌛ Validating src/juego/matchScene.wlk","timeElapsed":189,"timestamp":"2026-10-14T17:07:05.803Z"}
+{"level":"info","message":"⌛ Validating src/juego/gameHandler.wlk","timeElapsed":131,"timestamp":"2026-10-14T17:07:05.935Z"}
+{"level":"info","message":"⌛ Validating src/juego/juego.wpgm","timeElapsed":110,"timestamp":"2026-10-14T17:07:06.415Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":117,"timestamp":"2026-10-14T17:07:06.532Z"}
+{"level":"info","message":"⌛ Validating src/juego/cards.wlk","timeElapsed":110,"timestamp":"2026-10-14T17:07:06.642Z"}
+{"errors":{"errors":[null,["/*\r","IMPORTANTE IMÁGENES\r","Cada celda mide 64x64 pixeles\r","A continuación se pondrán el ancho x alto para cada imagen y luego en pixeles\r","- FONDOS: 1408 x 960 (22x15)\r","- CARTAS GRANDES: 256 x 256 (4x4)\r","- CARTAS CHICAS: 128 x 192 (2x3)\r","- CARTAS RIVAL (ocultas): 128 x 128 (2x2)\r","LAS CARTAS YA ESTÁN HECHAS :D FALTA AGREGARLAS\r"]]},"level":"error","message":"✘ Failed to get type description: Error: {\n  \"errors\": [\n    null,\n    [\n      \"/*\\r\",\n      \"IMPORTANTE IMÁGENES\\r\",\n      \"Cada celda mide 64x64 pixeles\\r\",\n      \"A continuación se pondrán el ancho x alto para cada imagen y luego en pixeles\\r\",\n      \"- FONDOS: 1408 x 960 (22x15)\\r\",\n      \"- CARTAS GRANDES: 256 x 256 (4x4)\\r\",\n      \"- CARTAS CHICAS: 128 x 192 (2x3)\\r\",\n      \"- CARTAS RIVAL (ocultas): 128 x 128 (2x2)\\r\",\n      \"LAS CARTAS YA ESTÁN HECHAS :D FALTA AGREGARLAS\\r\"\n    ]\n  ]\n} {\n  \"errors\": [\n    null,\n    [\n      \"/*\\r\",\n      \"IMPORTANTE IMÁGENES\\r\",\n      \"Cada celda mide 64x64 pixeles\\r\",\n      \"A continuación se pondrán el ancho x alto para cada imagen y luego en pixeles\\r\",\n      \"- FONDOS: 1408 x 960 (22x15)\\r\",\n      \"- CARTAS GRANDES: 256 x 256 (4x4)\\r\",\n      \"- CARTAS CHICAS: 128 x 192 (2x3)\\r\",\n      \"- CARTAS RIVAL (ocultas): 128 x 128 (2x2)\\r\",\n      \"LAS CARTAS YA ESTÁN HECHAS :D FALTA AGREGARLAS\\r\"\n    ]\n  ]\n}","stack":"Error: {\n  \"errors\": [\n    null,\n    [\n      \"/*\\r\",\n      \"IMPORTANTE IMÁGENES\\r\",\n      \"Cada celda mide 64x64 pixeles\\r\",\n      \"A continuación se pondrán el ancho x alto para cada imagen y luego en pixeles\\r\",\n      \"- FONDOS: 1408 x 960 (22x15)\\r\",\n      \"- CARTAS GRANDES: 256 x 256 (4x4)\\r\",\n      \"- CARTAS CHICAS: 128 x 192 (2x3)\\r\",\n      \"- CARTAS RIVAL (ocultas): 128 x 128 (2x2)\\r\",\n      \"LAS CARTAS YA ESTÁN HECHAS :D FALTA AGREGARLAS\\r\"\n    ]\n  ]\n}\n    at lS (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:64:34609)\n    at Q1 (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:64:34682)\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:64:37949\n    at o.y1 (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:57:59136)\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:64:37918\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:57:57176\n    at Dfn (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:68:11324)\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:68:3629\n    at Array.map (<anonymous>)\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:68:4693","timestamp":"2026-10-14T17:07:52.959Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":140,"timestamp":"2026-10-14T17:08:04.345Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":309,"timestamp":"2026-10-14T17:08:04.654Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Documents/UTN/2A/PdP/TrucoTemp/src/juego/Viborita.md","timestamp":"2026-10-14T17:08:04.770Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":106,"timestamp":"2026-10-14T17:08:22.628Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":297,"timestamp":"2026-10-14T17:08:22.925Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Documents/UTN/2A/PdP/TrucoTemp/src/juego/README.md","timestamp":"2026-10-14T17:08:23.035Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":142,"timestamp":"2026-10-14T17:08:35.158Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":308,"timestamp":"2026-10-14T17:08:35.466Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Documents/UTN/2A/PdP/TrucoTemp/src/juego/Viborita.md","timestamp":"2026-10-14T17:08:35.580Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":161,"timestamp":"2026-10-14T17:16:13.612Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":114,"timestamp":"2026-10-14T17:16:13.726Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Documents/UTN/2A/PdP/TrucoTemp/src/juego/README.md","timestamp":"2026-10-14T17:16:13.857Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":168,"timestamp":"2026-10-14T17:16:14.101Z"}
+{"level":"info","message":"⌛ Validating src/juego/matchScene.wlk","timeElapsed":117,"timestamp":"2026-10-14T17:16:14.704Z"}
+{"level":"info","message":"⌛ Validating src/juego/juego.wpgm","timeElapsed":104,"timestamp":"2026-10-14T17:16:14.809Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":105,"timestamp":"2026-10-14T17:16:14.914Z"}
+{"level":"info","message":"⌛ Validating src/juego/cards.wlk","timeElapsed":107,"timestamp":"2026-10-14T17:16:15.021Z"}
+{"level":"info","message":"⌛ Validating src/galletitas.wlk","timeElapsed":107,"timestamp":"2026-10-14T17:16:15.128Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":224,"timestamp":"2026-10-14T18:17:44.497Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":164,"timestamp":"2026-10-14T18:17:44.664Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":131,"timestamp":"2026-10-14T18:17:44.799Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":267,"timestamp":"2026-10-14T18:17:45.067Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":105,"timestamp":"2026-10-14T18:17:45.174Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":121,"timestamp":"2026-10-14T18:17:45.306Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":121,"timestamp":"2026-10-14T18:17:45.428Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":158,"timestamp":"2026-10-14T18:17:45.587Z"}
+{"level":"info","message":"⌛ Validating src/juego/vibora.wlk","timeElapsed":149,"timestamp":"2026-10-14T18:17:45.839Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":339,"timestamp":"2026-10-14T18:17:46.178Z"}
+{"level":"info","message":"⌛ Validating src/juego/matchScene.wlk","timeElapsed":115,"timestamp":"2026-10-14T18:17:46.391Z"}
+{"level":"info","message":"⌛ Validating src/juego/juego.wpgm","timeElapsed":106,"timestamp":"2026-10-14T18:17:46.498Z"}
+{"level":"info","message":"⌛ Validating src/juego/gameHandler.wlk","timeElapsed":102,"timestamp":"2026-10-14T18:17:46.601Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":104,"timestamp":"2026-10-14T18:17:46.705Z"}
+{"level":"info","message":"⌛ Validating src/juego/cards.wlk","timeElapsed":106,"timestamp":"2026-10-14T18:17:46.812Z"}
+{"level":"info","message":"⌛ Validating src/galletitas.wlk","timeElapsed":105,"timestamp":"2026-10-14T18:17:46.918Z"}
+{"level":"info","message":"⌛ Validating src/juego/vibora.wlk","timeElapsed":112,"timestamp":"2026-10-14T18:17:47.031Z"}
+{"level":"info","message":"⌛ Validating src/juego/matchScene.wlk","timeElapsed":106,"timestamp":"2026-10-14T18:17:47.238Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":107,"timestamp":"2026-10-14T18:17:47.540Z"}
+{"level":"info","message":"⌛ Validating src/juego/cards.wlk","timeElapsed":108,"timestamp":"2026-10-14T18:17:47.650Z"}
