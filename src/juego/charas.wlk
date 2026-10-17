@@ -50,7 +50,8 @@ const mainPlayer = new Chara()
 
 class Rival inherits Chara {
     const property nombre
-    const property imagen = ""
+    const property image
+    const property position
     const msgVictoria = "Gana rival placeholder"
     const msgDerrota = "Pierde rival placeholder"
     // var property cargoso QUE SE BURLE?
@@ -76,8 +77,10 @@ class Rival inherits Chara {
     method respuestaEnvido(estadoEnvido)
 }
 
+
 object rivalEasy inherits Rival(nombre = "easiest", dificultad = 1,
-    msgVictoria = "JA, PERDISTE CONTRA MÍ, SOS RE BOBO", msgDerrota = "Y bue, era obvio") {
+    msgVictoria = "JA, PERDISTE CONTRA MÍ, SOS RE BOBO", msgDerrota = "Y bue, era obvio",
+    position = game.at(3, 11), image = "rival/rivalEasy.png") {
     override method decideCantarTruco(e) = e == 1
     //override method decideAceptarTruco(e) = true
     override method respuestaTruco(e) = true
@@ -85,8 +88,56 @@ object rivalEasy inherits Rival(nombre = "easiest", dificultad = 1,
     override method decideCantarEnvido(e) = 1 // ojo que 2 no puede ser cantado de una
     //override method decideAceptarEnvido(e) = true
     override method respuestaEnvido(e) = 1 // quiero
-}/*
-const rivalMid = new Rival(nombre = "midest", dificultad = 2,
-    msgVictoria = "Jeje, no contabas con mi astucia 🤓", msgDerrota = "Hmm... bien jugado")
-const rivalHard = new Rival(nombre = "hardest", dificultad = 3,
-    msgVictoria = "No te calentés, ni tenías chance...", msgDerrota = "I-IMPOSIBLE!!! * se pega un tiro *") */
+}
+
+
+object rivalMid inherits Rival(nombre = "midest", dificultad = 2,
+    msgVictoria = "Jeje, no contabas con mi astucia 🤓", msgDerrota = "Hmm... bien jugado",
+    position = game.at(3, 11), image = "rival/rivalMid.png") {
+    override method decideCantarTruco(e) = e == 1
+    //override method decideAceptarTruco(e) = true
+    override method respuestaTruco(e) = true
+
+    override method decideCantarEnvido(e) = 1 // ojo que 2 no puede ser cantado de una
+    //override method decideAceptarEnvido(e) = true
+    override method respuestaEnvido(e) = 1 // quiero
+}
+object rivalHard inherits Rival(nombre = "hardest", dificultad = 3,
+    msgVictoria = "No te calentés, ni tenías chance...", msgDerrota = "I-IMPOSIBLE!!! * se pega un tiro *",
+    position = game.at(3, 11), image = "rival/rivalHard.png") {
+    override method decideCantarTruco(e) = e == 1
+    //override method decideAceptarTruco(e) = true
+    override method respuestaTruco(e) = true
+
+    override method decideCantarEnvido(e) = 1 // ojo que 2 no puede ser cantado de una
+    //override method decideAceptarEnvido(e) = true
+    override method respuestaEnvido(e) = 1 // quiero
+}
+
+
+
+
+object rivalCantor inherits Rival(nombre="cantor", dificultad = 0,
+    msgVictoria = "perdiste", msgDerrota = "ganaste",
+    position = game.at(3, 11), image = "rival/rivalEasy.png") {
+    override method decideCantarTruco(e) = true // siempre canta cuando puede
+    override method respuestaTruco(e) = false // nunca acepta
+    override method decideCantarEnvido(e) = 1 // inmediatamente canta
+    override method respuestaEnvido(e) = 0 // nunca acepta
+}
+object rivalAceptor inherits Rival(nombre="aceptor", dificultad = 0,
+    msgVictoria = "perdiste", msgDerrota = "ganaste",
+    position = game.at(3, 11), image = "rival/rivalEasy.png") {
+    override method decideCantarTruco(e) = false // nunca canta
+    override method respuestaTruco(e) = true // pero siempre acepta
+    override method decideCantarEnvido(e) = 0 // nunca canta
+    override method respuestaEnvido(e) = if (e==4) 1 else e + 1 // siempre acepta y eleva
+}
+object rivalTodo inherits Rival(nombre="todor", dificultad = 0,
+    msgVictoria = "perdiste", msgDerrota = "ganaste",
+    position = game.at(3, 11), image = "rival/rivalEasy.png") {
+    override method decideCantarTruco(e) = true
+    override method respuestaTruco(e) = true
+    override method decideCantarEnvido(e) = 1
+    override method respuestaEnvido(e) = if (e==4) 1 else e + 1
+}

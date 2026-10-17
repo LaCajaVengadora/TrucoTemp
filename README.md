@@ -41,8 +41,14 @@ Las imágenes deben tener lo siguiente
 - CARTAS GRANDES: 256 x 256 (4x4)
 - CARTAS CHICAS: 128 x 192 (2x3)
 - CARTAS RIVAL (ocultas): 128 x 128 (2x2)
-- ÍCONO RIVAL: 192 x 192 (3x3)
+- ÍCONO RIVAL (match): 192 x 192 (3x3)
+- ÍCONO RIVAL (selector): 384 x 384 (6x6)
 
 ### PARTIDA DE EJEMPLO:
 
 <img src="assets/example/match.png" alt="img sin cartas" width="400" height="auto"> <img src="assets/example/match-c.png" alt="img con cartas" width="400" height="auto">
+
+
+## CRÉDITOS
+
+- Imágenes de cartas 16bits: https://jcanabal.itch.io

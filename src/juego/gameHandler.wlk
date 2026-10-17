@@ -24,6 +24,7 @@ object gameHandler {
         game.cellSize(64)
         game.title("Truco")
 
+        game.boardGround("bg/placeholder_menu.png")
         self.setMenuScene()
         game.start()
     }
@@ -32,7 +33,7 @@ object gameHandler {
 
     method setMenuScene() {
         game.clear()
-        game.addVisual(menuBg)
+        //game.addVisual(menuBg)
         console.println("--- MENU SCENE ---")
 
         // ESPACIO inicia la escena de selección
@@ -55,9 +56,11 @@ object gameHandler {
 
     method setMatchScene(dificultad) {
         game.clear()
-        var match
-        if(dificultad == 1) match = matchEasy
+        var match var rival
+        if(dificultad == 1) match = matchEasy else if (dificultad == 2) match = matchMid else {match = matchHard}
+        rival = match.rival()
         game.addVisual(match)
+        game.addVisual(rival)
         console.println("--- MATCH ("+dificultad+") SCENE ---")
 
         match.start()
@@ -77,28 +80,11 @@ object gameHandler {
         keyboard.f().onPressDo({match.cantarEnvidoPlayer(4)})
 
         // SHIFT vuelve a la escena de menu inicial
-        keyboard.shift().onPressDo({match.atch().cancel() self.setMenuScene()})
+        keyboard.shift().onPressDo({match.cancel() self.setMenuScene()})
     }
 }
 
-
-object menuBg {
-    const property position = game.at(0, 0)
-    const property image = "placeholder_menu.png"
-}
 object selectorBg {
     const property position = game.at(0, 0)
-    const property image = "card_prueba.png"
-}
-object matchEasyBg { // TODO: DEBERÍAN SER PARTE DE CADA MatchScene ?
-    const property position = game.at(0, 0)
-    const property image = "placeholder_juego.png"
-}
-object matchMidBg {
-    const property position = game.at(0, 0)
-    const property image = "placeholder_juego.png"
-}
-object matchHardBg {
-    const property position = game.at(0, 0)
-    const property image = "placeholder_juego.png"
+    const property image = "bg/placeholder_selector.png"
 }

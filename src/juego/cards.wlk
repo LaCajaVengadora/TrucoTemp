@@ -23,7 +23,8 @@ class Carta {
     const property palo
     const property valorEnvido = if ([10, 11, 12].contains(num)) 0 else num
     const property jerarquia
-    const property imagen = ""
+    const property image = ""
+    var property position = game.origin()
 
 
     // -1 si es peor, 0 si es igual, 1 si es mejor

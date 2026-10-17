@@ -2,37 +2,38 @@ import src.juego.cards.*
 import src.juego.charas.*
 
 class Match {
-    const property bg
+    // TODO: CERCA DEL FINAL, REVISAR QUÉ DEBERÍA SER PROPERTY Y QUÉ NO
+    const property image
     const property position = game.origin()
 
-    const player = mainPlayer
-    const rival
-    const dificultad = rival.dificultad()
+    const property player = mainPlayer
+    const property rival
+    const property dificultad = rival.dificultad()
     var property puntosWin = 10
 
     var property puntosPlayer = 0 // resetear al FINAL
-    var manosFavorPlayer = 0 // resetear con RONDA
+    var property manosFavorPlayer = 0 // resetear con RONDA
     var property cartaPlayer = joker // resetear con RONDA
-    var numsCartasJugadasPlayer = [] // resetear con RONDA
+    var property numsCartasJugadasPlayer = [] // resetear con RONDA
     var property puntosRival = 0 // resetear al FINAL
-    var manosFavorRival = 0 // resetear con RONDA
+    var property manosFavorRival = 0 // resetear con RONDA
     var property cartaRival = joker // resetear con RONDA
-    var numsCartasJugadasRival = [] // resetear con RONDA
+    var property numsCartasJugadasRival = [] // resetear con RONDA
 
     // despues vemos bien por el truco y siguientes
     var property nivelTruco = 0 // comprueba tanto el nivel como los puntos resetear con RONDA
     var property esCantorTrucoPlayer = false // resetear con RONDA
 
-    var nivelEnvido = 0 // comprueba el nivel (1, 2, 3, 4)
-    var puntosEnvido = 0 // comprueba los puntos (va sumando a medida que se acepta)
-    var rivalEsperaRtaEnvido = false
-    var nivelCantadoPorRival = 0 // para pasar la data entre métodos (sobre todo para sumar 1 ante el rechazo del primer canto)
-    var esCantorUltimoEnvidoPlayer = false // TODO: puede hacerse lo mismo en el truco, lo vale?
+    var property nivelEnvido = 0 // comprueba el nivel (1, 2, 3, 4)
+    var property puntosEnvido = 0 // comprueba los puntos (va sumando a medida que se acepta)
+    var property rivalEsperaRtaEnvido = false
+    var property nivelCantadoPorRival = 0 // para pasar la data entre métodos (sobre todo para sumar 1 ante el rechazo del primer canto)
+    var property esCantorUltimoEnvidoPlayer = false // TODO: puede hacerse lo mismo en el truco, lo vale?
     var property cantEnvidoPlayer = 0
     var property cantEnvidoRival = 0
 
     var property mano = 1 // resetear con RONDA
-    var turno = 1 // resetear con RONDA
+    var property turno = 1 // resetear con RONDA
 
     var property rivalEsperaRtaTruco = false // resetear con RONDA
 
@@ -41,9 +42,9 @@ class Match {
     // indica de quien es el turno (false rival, true jugador)
     var property esTurnoPlayer = esManoPlayer // resetear al FINAL
 
-    const nextTruco = new Dictionary()
-    const nextEnvido = new Dictionary()
-    var puntosPorEnvido = new Dictionary()
+    const property nextTruco = new Dictionary()
+    const property nextEnvido = new Dictionary()
+    var property puntosPorEnvido = new Dictionary()
     override method initialize() {
         nextTruco.put(-1, "NADA")
         nextTruco.put(0, "TRUCO")
@@ -75,7 +76,7 @@ class Match {
 
     // reparte las cartas
     method repartir() {
-        var mazoAux = mazoEntero.randomized()
+        const mazoAux = mazoEntero.randomized()
         player.asignarCartas(mazoAux.subList(0,2))
         rival.asignarCartas(mazoAux.subList(3,5))
         self.sumarPuntosEnvido()
@@ -142,7 +143,7 @@ class Match {
             esTurnoPlayer = esManoPlayer
         }
 
-        var difFavor = (manosFavorPlayer - manosFavorRival).abs()
+        const difFavor = (manosFavorPlayer - manosFavorRival).abs()
         if (difFavor == 2) self.avanzarRonda(manosFavorPlayer > manosFavorRival) // ← iguales ↓
         else if (difFavor == 1 && mano >= 3) self.avanzarRonda(manosFavorPlayer > manosFavorRival)
         else if (difFavor == 0 && mano == 4) self.avanzarRonda(esManoPlayer)
@@ -187,7 +188,7 @@ class Match {
     method pedirCartaRival() {
         const cartas = [1, 2, 3] // cartas posibles a elegir
         cartas.removeAll(numsCartasJugadasRival) // saca las que ya tiró
-        var numCarta = cartas.anyOne() // elige una dentro de las posibles
+        const numCarta = cartas.anyOne() // elige una dentro de las posibles
         cartaRival = rival.jugarCarta(numCarta) // juega esa carta (la retorna) y se guarda
 
         numsCartasJugadasRival.add(numCarta) // la añade a las jugadas por RIVAL
@@ -233,7 +234,7 @@ class Match {
     
     // ver MÉTODOS DE TRUCO
     method asignarPuntosTruco(ganoPlayer) {
-        var neto = 1 + nivelTruco // automáticamente, sin importar si hubo Truco o no, se suma 1 punto a quien gane
+        const neto = 1 + nivelTruco // automáticamente, sin importar si hubo Truco o no, se suma 1 punto a quien gane
         // nivelTruco contiene los puntos
         if (ganoPlayer) puntosPlayer += neto
         else puntosRival += neto
@@ -370,7 +371,7 @@ class Match {
             console.println("Player canta " + nextEnvido.get(nivelCantado-1))
 
             // 0 → NO QUIERE, 1 → SI QUIERE, 2 → SUBE A ENVIDO (2), 3 → SUBE A REALENVIDO, 4 → SUBE A FALTAENVIDO (1→NADA)
-            var rtaRival = rival.respuestaEnvido(nivelCantado) // TODO: evaluar cómo decide
+            const rtaRival = rival.respuestaEnvido(nivelCantado) // TODO: evaluar cómo decide
             // IMPORTANTE: asumimos que RIVAL no va a responder un nivel anterior
 
             if (rtaRival == 0) {
@@ -441,7 +442,72 @@ class Match {
     }
 }
 
-const matchEasy = new Match(rival = rivalEasy, bg = "placeholder_juego.png")
+// para tests ↓ (rivalTodo acepta y canta todo si se le permite)
+object matchCtrl inherits Match(rival = rivalTodo, image = "bg/placeholder_matchEasy.png") {
+
+    var property ganadorFinal = false // para controlar quien gana (false si rival, true si player)
+
+    // "reinicia" valores para hacer los tests
+    method setTest() {
+        puntosPlayer = 0 puntosRival = 0
+        manosFavorPlayer = 0 manosFavorRival = 0
+        nivelTruco = 0 esCantorTrucoPlayer = false rivalEsperaRtaTruco = false
+        nivelEnvido = 0 puntosEnvido = 0 rivalEsperaRtaEnvido = false nivelCantadoPorRival = 0 esCantorUltimoEnvidoPlayer = false
+
+        mano = 1 turno = 1
+        esManoPlayer = true esTurnoPlayer = true
+        numsCartasJugadasPlayer.clear() numsCartasJugadasRival.clear()
+        cartaPlayer = joker cartaRival = joker ganadorFinal = false
+
+        player.limpiarMano() rival.limpiarMano()
+    }
+
+    // NO USAR ESTE REPARTIR
+    override method repartir() {}
+    // ejecutarTurnoRival no hace nada, nosotros lo controlamos, MANUALMENTE HACER EL AVANZARTURNO
+    override method ejecutarTurnoRival() {}
+    override method retornarFlujo() {}
+
+    // INICIAR CON REPARTIR, NO CON START
+    method repartir(cartasP, cartasR) {
+        player.asignarCartas(cartasP)
+        rival.asignarCartas(cartasR)
+        self.sumarPuntosEnvido()
+    }
+
+
+    override method end(ganoPlayer) { ganadorFinal = ganoPlayer }
+
+    override method cantarTrucoRival() {
+        if (!esTurnoPlayer && self.puedeCantarTrucoRival()) {
+            if (nivelTruco == 0) esCantorTrucoPlayer = false
+            console.println("Rival canta " + nextTruco.get(nivelTruco))
+            rivalEsperaRtaTruco = true
+        }
+    }
+    override method cantarEnvidoRival(nivelCantado) {
+        esCantorUltimoEnvidoPlayer = false
+        console.println("Rival canta " + nextEnvido.get(nivelCantado-1))
+        nivelCantadoPorRival = nivelCantado
+        rivalEsperaRtaEnvido = true
+    }
+    method pedirCartaRival(num) {
+        if (!esTurnoPlayer) {
+            if ([1, 2, 3].contains(num) && !numsCartasJugadasRival.contains(num)) {
+                cartaRival = rival.jugarCarta(num)
+                numsCartasJugadasRival.add(num)
+                console.println("Rival tira: " + cartaRival)
+                self.avanzarTurno()
+            } else console.println("No es posible tirar esa carta")
+        }
+    }
+
+}
+
+const matchEasy = new Match(rival = rivalEasy, image = "bg/placeholder_matchEasy.png")
+const matchMid = new Match(rival = rivalMid, image = "bg/placeholder_matchMid.png")
+const matchHard = new Match(rival = rivalHard, image = "bg/placeholder_matchHard.png")
+
 
 object tester {
     method init() {

@@ -1,88 +1,104 @@
-import src.juego.vibora.*
+import src.juego.charas.*
+import src.juego.matchScene.*
+import src.juego.cards.*
 
-/*describe "truco" {
-    test ""
-}*/
 
-describe "viborita" {
-    test "moverIzquierda"{
-        vibora.direccion(izquierda)
-        vibora.position(new Position(x=2,y=5))
+describe "match" {
+    
+    test "player no puede jugar fuera de su turno" {
+        matchCtrl.setTest()
 
-        vibora.moverse()   
+        matchCtrl.esTurnoPlayer(false)
+        matchCtrl.pedirCartaPlayer(1)
 
-        assert.equals(
-            new Position(x=1,y=5),
-            vibora.position()
-        )
+        assert.equals([], matchCtrl.numsCartasJugadasPlayer()) // no tiró nada
     }
 
-    test "moverDerecha"{
-        vibora.direccion(derecha)
-        vibora.position(new Position(x=2, y=5))
+    test "player no puede tirar dos veces la misma carta" {
+        matchCtrl.setTest()
 
-        vibora.moverse()   
+        matchCtrl.numsCartasJugadasPlayer().add(1)
+        matchCtrl.pedirCartaPlayer(1)
 
-        assert.equals(
-            new Position(x=3,y=5),
-            vibora.position()
-        )
+        assert.equals([1], matchCtrl.numsCartasJugadasPlayer()) // no tiró nada
     }
 
-    test "moverArriba"{
-        vibora.direccion(arriba)
-        vibora.position(new Position(x=2, y=5))
+    test "la carta más fuerte al final de la mano le da el próximo turno al player" {
+        matchCtrl.setTest()
 
-        vibora.moverse()   
+        matchCtrl.cartaPlayer(espada1)
+        matchCtrl.cartaRival(basto1)
+        matchCtrl.avanzarMano()
 
-        assert.equals(
-            new Position(x=2,y=6),
-            vibora.position()
-        )
+        assert.equals(1, matchCtrl.manosFavorPlayer())
+        assert.equals(0, matchCtrl.manosFavorRival())
+        assert.that(matchCtrl.esTurnoPlayer())
     }
 
-    test "moverAbajo"{
-        vibora.direccion(abajo)
-        vibora.position(new Position(x=2, y=5))
+    test "si player rechaza Truco le da un punto al rival" {
+        matchCtrl.setTest()
 
-        vibora.moverse()   
+        matchCtrl.esCantorTrucoPlayer(false)
+        matchCtrl.rivalEsperaRtaTruco(true)
+        matchCtrl.aceptarTrucoPlayer(false)
 
-        assert.equals(
-            new Position(x=2,y=4),
-            vibora.position()
-        )
+        assert.equals(1, matchCtrl.puntosRival())
+        assert.equals(0, matchCtrl.puntosPlayer())
+        assert.equals(0, matchCtrl.nivelTruco())
     }
 
-    test "si mira para arriba la imagen es la vibora para arriba"{
-        vibora.direccion(arriba)
+    test "si player gana Truco se le suman dos puntos" {
+        matchCtrl.setTest()
 
-        assert.equals(
-            "viborita_cabeza_arriba.png",
-            vibora.image()
-        )
-    }
-        test "si mira para la izquierda la imagen es la vibora para la izquierda"{
-        vibora.direccion(izquierda)
+        matchCtrl.esCantorTrucoPlayer(false)
+        matchCtrl.rivalEsperaRtaTruco(true)
+        matchCtrl.aceptarTrucoPlayer(true)
 
-        assert.equals(
-            "viborita_cabeza_izquierda.png",
-            vibora.image()
-        )
-    }
-        test "si mira para la derecha la imagen es la vibora para la derecha"{
-        vibora.direccion(derecha)
+        assert.equals(1, matchCtrl.nivelTruco())
+        assert.equals(false, matchCtrl.rivalEsperaRtaTruco())
 
-        assert.equals(
-            "viborita_cabeza_derecha.png",
-            vibora.image()
-        )
-    }
-        test "si mira para abajo la imagen es la vibora para abajo"{
-        vibora.direccion(abajo)
+        matchCtrl.avanzarRonda(true)
 
-        assert.equals(
-            "viborita_cabeza_abajo.png",
-            vibora.image()
-        )
+        assert.equals(2, matchCtrl.puntosPlayer())
     }
+
+    test "si hay empate en Envido, gana quien sea mano" {
+        matchCtrl.setTest()
+
+        matchCtrl.esManoPlayer(true)
+        matchCtrl.cantEnvidoPlayer(25)
+        matchCtrl.cantEnvidoRival(25)
+        matchCtrl.nivelEnvido(1)
+        matchCtrl.puntosEnvido(2)
+        matchCtrl.compararPuntosEnvido()
+
+        assert.equals(2, matchCtrl.puntosPlayer())
+        assert.equals(0, matchCtrl.puntosRival())
+    }
+
+    test "si alguien supera el puntosWin, se termina la partida" {
+        matchCtrl.setTest()
+
+        matchCtrl.puntosPlayer(matchCtrl.puntosWin())
+        const fin = matchCtrl.checkVictoria()
+
+        assert.that(fin)
+        assert.that(matchCtrl.ganadorFinal()) // true si gana player
+    }
+    
+    test "reiniciar la ronda resetea el estado del juego" {
+        matchCtrl.setTest()
+
+        matchCtrl.numsCartasJugadasPlayer().add(1) matchCtrl.numsCartasJugadasRival().add(2)
+        matchCtrl.manosFavorPlayer(1) matchCtrl.manosFavorRival(1)
+        matchCtrl.nivelTruco(2) matchCtrl.rivalEsperaRtaTruco(true)
+        matchCtrl.nivelEnvido(1) matchCtrl.rivalEsperaRtaEnvido(true)
+        matchCtrl.resetRonda()
+
+        assert.equals([], matchCtrl.numsCartasJugadasPlayer()) assert.equals([], matchCtrl.numsCartasJugadasRival())
+        assert.equals(0, matchCtrl.manosFavorPlayer()) assert.equals(0, matchCtrl.manosFavorRival())
+        assert.equals(0, matchCtrl.nivelTruco()) assert.equals(false, matchCtrl.rivalEsperaRtaTruco())
+        assert.equals(0, matchCtrl.nivelEnvido()) assert.equals(false, matchCtrl.rivalEsperaRtaEnvido())
+    }
+
 }
