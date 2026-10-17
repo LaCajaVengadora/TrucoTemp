@@ -44,6 +44,8 @@ Las imágenes deben tener lo siguiente
 - ÍCONO RIVAL (match): 192 x 192 (3x3)
 - ÍCONO RIVAL (selector): 384 x 384 (6x6)
 
+<img src="assets/example/diagram.png" alt="img sin cartas" width="400" height="auto">
+
 ### PARTIDA DE EJEMPLO:
 
 <img src="assets/example/match.png" alt="img sin cartas" width="400" height="auto"> <img src="assets/example/match-c.png" alt="img con cartas" width="400" height="auto">

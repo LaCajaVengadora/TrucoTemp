@@ -1,4 +1,4 @@
-import src.juego.matchScene.*
+import src.matchScene.*
 
 /*
 IMPORTANTE IMÁGENES

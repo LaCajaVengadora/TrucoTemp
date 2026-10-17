@@ -1,4 +1,4 @@
-import src.juego.cards.joker
+import src.cards.joker
 class Chara {
     var property cartas = new Dictionary()
 

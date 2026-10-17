@@ -1,5 +1,5 @@
-import src.juego.cards.*
-import src.juego.charas.*
+import src.cards.*
+import src.charas.*
 
 class Match {
     // TODO: CERCA DEL FINAL, REVISAR QUÉ DEBERÍA SER PROPERTY Y QUÉ NO

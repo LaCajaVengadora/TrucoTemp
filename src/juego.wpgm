@@ -1,13 +1,12 @@
-import src.juego.vibora.*
-import src.juego.gameHandler.gameHandler
+import src.gameHandler.gameHandler
 
 program miJuego {
 
     gameHandler.start()
 
-    game.onTick(600, "moverse", { vibora.moverse() } )
+    /* game.onTick(600, "moverse", { vibora.moverse() } )
     keyboard.right().onPressDo({ vibora.direccion(derecha) })
     keyboard.left().onPressDo({ vibora.direccion(izquierda) })
     keyboard.up().onPressDo({ vibora.direccion(arriba) })
-    keyboard.down().onPressDo({ vibora.direccion(abajo) })
+    keyboard.down().onPressDo({ vibora.direccion(abajo) }) */
 }

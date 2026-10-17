@@ -405,3 +405,111 @@
 {"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":104,"timestamp":"2026-10-17T15:00:51.794Z"}
 {"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":101,"timestamp":"2026-10-17T15:00:51.895Z"}
 {"level":"info","message":"🧪 Test runner executed on c:\\Users\\Usuario\\Desktop\\UTN\\2A\\PdP\\TrucoTemp","result":{"errored":0,"failed":0,"ok":8},"testsFailed":[],"timeElapsed":815,"timestamp":"2026-10-17T15:00:56.291Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":218,"timestamp":"2026-10-17T15:01:12.163Z"}
+{"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":156,"timestamp":"2026-10-17T15:01:12.324Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":119,"timestamp":"2026-10-17T15:01:12.969Z"}
+{"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":104,"timestamp":"2026-10-17T15:01:13.079Z"}
+{"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":101,"timestamp":"2026-10-17T15:01:14.387Z"}
+{"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":104,"timestamp":"2026-10-17T15:01:17.632Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":118,"timestamp":"2026-10-17T15:01:18.870Z"}
+{"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":115,"timestamp":"2026-10-17T15:01:18.986Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":108,"timestamp":"2026-10-17T15:01:20.645Z"}
+{"level":"info","message":"⌛ Validating src/juego/tests.wtest","timeElapsed":105,"timestamp":"2026-10-17T15:01:20.751Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":387,"timestamp":"2026-10-17T15:51:30.080Z"}
+{"level":"info","message":"⌛ Validating src/juego/matchScene.wlk","timeElapsed":173,"timestamp":"2026-10-17T15:51:30.255Z"}
+{"level":"info","message":"⌛ Validating src/juego/juego.wpgm","timeElapsed":115,"timestamp":"2026-10-17T15:51:30.371Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":144,"timestamp":"2026-10-17T16:49:39.893Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":148,"timestamp":"2026-10-17T16:49:40.044Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":107,"timestamp":"2026-10-17T16:49:40.151Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":120,"timestamp":"2026-10-17T16:49:40.272Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":117,"timestamp":"2026-10-17T16:49:40.587Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":129,"timestamp":"2026-10-17T16:49:40.717Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":121,"timestamp":"2026-10-17T16:49:40.840Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":123,"timestamp":"2026-10-17T16:49:40.964Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":103,"timestamp":"2026-10-17T16:49:41.920Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":107,"timestamp":"2026-10-17T16:49:42.028Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":106,"timestamp":"2026-10-17T16:49:42.440Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":119,"timestamp":"2026-10-17T16:49:42.584Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":112,"timestamp":"2026-10-17T16:49:42.698Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":115,"timestamp":"2026-10-17T16:49:42.813Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":127,"timestamp":"2026-10-17T16:49:43.065Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":128,"timestamp":"2026-10-17T16:49:43.278Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":110,"timestamp":"2026-10-17T16:49:43.389Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":147,"timestamp":"2026-10-17T16:49:43.537Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":108,"timestamp":"2026-10-17T16:49:43.672Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":104,"timestamp":"2026-10-17T16:49:43.872Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":105,"timestamp":"2026-10-17T16:49:44.066Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":105,"timestamp":"2026-10-17T16:49:44.176Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":104,"timestamp":"2026-10-17T16:49:44.280Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":102,"timestamp":"2026-10-17T16:49:45.136Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":108,"timestamp":"2026-10-17T16:50:06.234Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":118,"timestamp":"2026-10-17T16:50:06.352Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":102,"timestamp":"2026-10-17T16:50:06.583Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":108,"timestamp":"2026-10-17T16:50:06.692Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":104,"timestamp":"2026-10-17T16:50:06.926Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":116,"timestamp":"2026-10-17T16:50:07.046Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":110,"timestamp":"2026-10-17T16:50:07.436Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":116,"timestamp":"2026-10-17T16:50:07.558Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":105,"timestamp":"2026-10-17T16:50:08.646Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":112,"timestamp":"2026-10-17T16:50:09.538Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":102,"timestamp":"2026-10-17T16:50:09.657Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":107,"timestamp":"2026-10-17T16:50:09.874Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":101,"timestamp":"2026-10-17T16:50:10.872Z"}
+{"level":"info","message":"⌛ Validating src/juego/charas.wlk","timeElapsed":103,"timestamp":"2026-10-17T16:50:11.218Z"}
+{"errors":{"errors":[null,"data    | ------ Player | Rival ------\n"]},"level":"error","message":"✘ Failed to get type description: Error: {\n  \"errors\": [\n    null,\n    \"data    | ------ Player | Rival ------\\n\"\n  ]\n} {\n  \"errors\": [\n    null,\n    \"data    | ------ Player | Rival ------\\n\"\n  ]\n}","stack":"Error: {\n  \"errors\": [\n    null,\n    \"data    | ------ Player | Rival ------\\n\"\n  ]\n}\n    at lS (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:64:34609)\n    at Q1 (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:64:34682)\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:64:37949\n    at o.y1 (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:57:59136)\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:64:37918\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:57:57165\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:68:7948\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:38:6131\n    at c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:68:3664\n    at d4 (c:\\Users\\Usuario\\.vscode\\extensions\\uqbar.wollok-lsp-ide-0.5.5\\out\\server\\src\\server.js:68:9866)","timestamp":"2026-10-17T17:09:17.918Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":154,"timestamp":"2026-10-17T17:25:25.083Z"}
+{"level":"info","message":"⌛ Validating src/galletitas.wlk","timeElapsed":138,"timestamp":"2026-10-17T17:25:25.285Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":116,"timestamp":"2026-10-17T17:25:29.600Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":363,"timestamp":"2026-10-17T17:25:29.963Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/UTN/2A/PdP/TrucoTemp/src/galletitas.wlk","timestamp":"2026-10-17T17:25:30.081Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":116,"timestamp":"2026-10-17T17:25:30.248Z"}
+{"level":"info","message":"⌛ Validating src/juego/vibora.wlk","timeElapsed":124,"timestamp":"2026-10-17T17:25:30.374Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":270,"timestamp":"2026-10-17T17:25:32.786Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/UTN/2A/PdP/TrucoTemp/src/juego/vibora.wlk","timestamp":"2026-10-17T17:25:32.897Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":129,"timestamp":"2026-10-17T17:25:42.540Z"}
+{"level":"info","message":"⌛ Validating src/cards.wlk","timeElapsed":143,"timestamp":"2026-10-17T17:25:42.732Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":130,"timestamp":"2026-10-17T17:25:43.534Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":141,"timestamp":"2026-10-17T17:25:43.676Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":225,"timestamp":"2026-10-17T17:25:43.998Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":120,"timestamp":"2026-10-17T17:25:44.120Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":277,"timestamp":"2026-10-17T17:25:44.475Z"}
+{"level":"info","message":"⌛ Validating src/charas.wlk","timeElapsed":147,"timestamp":"2026-10-17T17:25:44.630Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/UTN/2A/PdP/TrucoTemp/src/juego/cards.wlk","timestamp":"2026-10-17T17:25:44.631Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/UTN/2A/PdP/TrucoTemp/src/juego/charas.wlk","timestamp":"2026-10-17T17:25:44.631Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/UTN/2A/PdP/TrucoTemp/src/juego/gameHandler.wlk","timestamp":"2026-10-17T17:25:44.631Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/UTN/2A/PdP/TrucoTemp/src/juego/juego.wpgm","timestamp":"2026-10-17T17:25:44.631Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/UTN/2A/PdP/TrucoTemp/src/juego/matchScene.wlk","timestamp":"2026-10-17T17:25:44.631Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/UTN/2A/PdP/TrucoTemp/src/juego/tests.wtest","timestamp":"2026-10-17T17:25:44.631Z"}
+{"level":"info","message":"⌛ Validating src/gameHandler.wlk","timeElapsed":118,"timestamp":"2026-10-17T17:25:44.750Z"}
+{"level":"info","message":"⌛ Validating src/juego.wpgm","timeElapsed":118,"timestamp":"2026-10-17T17:25:44.868Z"}
+{"level":"info","message":"⌛ Validating src/matchScene.wlk","timeElapsed":155,"timestamp":"2026-10-17T17:25:45.023Z"}
+{"level":"info","message":"⌛ Validating src/tests.wtest","timeElapsed":163,"timestamp":"2026-10-17T17:25:45.187Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":113,"timestamp":"2026-10-17T17:25:47.749Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":103,"timestamp":"2026-10-17T17:25:47.853Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/UTN/2A/PdP/TrucoTemp/src/juego","timestamp":"2026-10-17T17:25:47.982Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":168,"timestamp":"2026-10-17T17:25:48.151Z"}
+{"level":"info","message":"⌛ Validating src/charas.wlk","timeElapsed":104,"timestamp":"2026-10-17T17:25:48.877Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":110,"timestamp":"2026-10-17T17:26:48.348Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":129,"timestamp":"2026-10-17T17:26:48.686Z"}
+{"level":"info","message":"⌛ Validating src/charas.wlk","timeElapsed":108,"timestamp":"2026-10-17T17:26:48.794Z"}
+{"level":"info","message":"⌛ Validating src/charas.wlk","timeElapsed":104,"timestamp":"2026-10-17T17:26:48.899Z"}
+{"level":"info","message":"⌛ Validating src/charas.wlk","timeElapsed":106,"timestamp":"2026-10-17T17:26:49.194Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":105,"timestamp":"2026-10-17T17:26:49.299Z"}
+{"level":"info","message":"⌛ Validating src/charas.wlk","timeElapsed":103,"timestamp":"2026-10-17T17:26:49.402Z"}
+{"level":"info","message":"⌛ Validating src/charas.wlk","timeElapsed":101,"timestamp":"2026-10-17T17:26:49.511Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":115,"timestamp":"2026-10-17T17:26:58.745Z"}
+{"level":"info","message":"⌛ Validating src/tests.wtest","timeElapsed":113,"timestamp":"2026-10-17T17:26:58.859Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":163,"timestamp":"2026-10-17T17:27:07.321Z"}
+{"level":"info","message":"⌛ Validating src/gameHandler.wlk","timeElapsed":102,"timestamp":"2026-10-17T17:27:12.301Z"}
+{"level":"info","message":"⌛ Validating src/gameHandler.wlk","timeElapsed":103,"timestamp":"2026-10-17T17:27:12.488Z"}
+{"level":"info","message":"⌛ Validating src/gameHandler.wlk","timeElapsed":101,"timestamp":"2026-10-17T17:27:12.766Z"}
+{"level":"info","message":"⌛ Validating src/gameHandler.wlk","timeElapsed":125,"timestamp":"2026-10-17T17:27:12.894Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":109,"timestamp":"2026-10-17T17:27:13.004Z"}
+{"level":"info","message":"⌛ Validating src/gameHandler.wlk","timeElapsed":103,"timestamp":"2026-10-17T17:27:13.311Z"}
+{"level":"info","message":"⌛ Validating src/juego.wpgm","timeElapsed":111,"timestamp":"2026-10-17T17:27:20.840Z"}
+{"level":"info","message":"⌛ Validating src/juego.wpgm","timeElapsed":111,"timestamp":"2026-10-17T17:27:21.033Z"}
+{"level":"info","message":"⌛ Validating src/juego.wpgm","timeElapsed":108,"timestamp":"2026-10-17T17:27:21.210Z"}
+{"level":"info","message":"⌛ Validating src/juego.wpgm","timeElapsed":110,"timestamp":"2026-10-17T17:27:21.401Z"}
+{"level":"info","message":"⌛ Validating src/juego.wpgm","timeElapsed":102,"timestamp":"2026-10-17T17:27:21.753Z"}
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34msrc.juego.miJuego\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\Users\\Usuario\\Desktop\\UTN\\2A\\PdP\\TrucoTemp\u001b[39m\u001b[23m","ok":true,"timeElapsed":728,"timestamp":"2026-10-17T17:27:36.007Z"}
+{"exitCode":"SIGINT","level":"info","message":"👾 Game executed src.juego.miJuego on c:\\Users\\Usuario\\Desktop\\UTN\\2A\\PdP\\TrucoTemp","timeElapsed":24842,"timestamp":"2026-10-17T17:28:00.123Z"}

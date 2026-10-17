@@ -1,6 +1,6 @@
-import src.juego.charas.*
-import src.juego.matchScene.*
-import src.juego.cards.*
+import src.charas.*
+import src.matchScene.*
+import src.cards.*
 
 
 describe "match" {
