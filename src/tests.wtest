@@ -38,24 +38,24 @@ describe "match" {
     test "si player rechaza Truco le da un punto al rival" {
         matchCtrl.setTest()
 
-        matchCtrl.esCantorTrucoPlayer(false)
-        matchCtrl.rivalEsperaRtaTruco(true)
+        matchCtrl.trucoHandler().esCantorTrucoPlayer(false)
+        matchCtrl.trucoHandler().rivalEsperaRtaTruco(true)
         matchCtrl.aceptarTrucoPlayer(false)
 
         assert.equals(1, matchCtrl.puntosRival())
         assert.equals(0, matchCtrl.puntosPlayer())
-        assert.equals(0, matchCtrl.nivelTruco())
+        assert.equals(0, matchCtrl.trucoHandler().nivelTruco())
     }
 
     test "si player gana Truco se le suman dos puntos" {
         matchCtrl.setTest()
 
-        matchCtrl.esCantorTrucoPlayer(false)
-        matchCtrl.rivalEsperaRtaTruco(true)
+        matchCtrl.trucoHandler().esCantorTrucoPlayer(false)
+        matchCtrl.trucoHandler().rivalEsperaRtaTruco(true)
         matchCtrl.aceptarTrucoPlayer(true)
 
-        assert.equals(1, matchCtrl.nivelTruco())
-        assert.equals(false, matchCtrl.rivalEsperaRtaTruco())
+        assert.equals(1, matchCtrl.trucoHandler().nivelTruco())
+        assert.equals(false, matchCtrl.trucoHandler().rivalEsperaRtaTruco())
 
         matchCtrl.avanzarRonda(true)
 
@@ -66,11 +66,11 @@ describe "match" {
         matchCtrl.setTest()
 
         matchCtrl.esManoPlayer(true)
-        matchCtrl.cantEnvidoPlayer(25)
-        matchCtrl.cantEnvidoRival(25)
-        matchCtrl.nivelEnvido(1)
-        matchCtrl.puntosEnvido(2)
-        matchCtrl.compararPuntosEnvido()
+        matchCtrl.envidoHandler().cantEnvidoPlayer(25)
+        matchCtrl.envidoHandler().cantEnvidoRival(25)
+        matchCtrl.envidoHandler().nivelEnvido(1)
+        matchCtrl.envidoHandler().puntosEnvido(2)
+        matchCtrl.envidoHandler().compararPuntosEnvido()
 
         assert.equals(2, matchCtrl.puntosPlayer())
         assert.equals(0, matchCtrl.puntosRival())
@@ -91,14 +91,14 @@ describe "match" {
 
         matchCtrl.numsCartasJugadasPlayer().add(1) matchCtrl.numsCartasJugadasRival().add(2)
         matchCtrl.manosFavorPlayer(1) matchCtrl.manosFavorRival(1)
-        matchCtrl.nivelTruco(2) matchCtrl.rivalEsperaRtaTruco(true)
-        matchCtrl.nivelEnvido(1) matchCtrl.rivalEsperaRtaEnvido(true)
+        matchCtrl.trucoHandler().nivelTruco(2) matchCtrl.trucoHandler().rivalEsperaRtaTruco(true)
+        matchCtrl.envidoHandler().nivelEnvido(1) matchCtrl.envidoHandler().rivalEsperaRtaEnvido(true)
         matchCtrl.resetRonda()
 
         assert.equals([], matchCtrl.numsCartasJugadasPlayer()) assert.equals([], matchCtrl.numsCartasJugadasRival())
         assert.equals(0, matchCtrl.manosFavorPlayer()) assert.equals(0, matchCtrl.manosFavorRival())
-        assert.equals(0, matchCtrl.nivelTruco()) assert.equals(false, matchCtrl.rivalEsperaRtaTruco())
-        assert.equals(0, matchCtrl.nivelEnvido()) assert.equals(false, matchCtrl.rivalEsperaRtaEnvido())
+        assert.equals(0, matchCtrl.trucoHandler().nivelTruco()) assert.equals(false, matchCtrl.trucoHandler().rivalEsperaRtaTruco())
+        assert.equals(0, matchCtrl.envidoHandler().nivelEnvido()) assert.equals(false, matchCtrl.envidoHandler().rivalEsperaRtaEnvido())
     }
 
 }
